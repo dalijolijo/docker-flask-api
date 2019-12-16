@@ -1,13 +1,10 @@
-# docker-flask-example
-[![](https://images.microbadger.com/badges/version/macinv/flask-example.svg)](https://microbadger.com/images/macinv/flask-example "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/macinv/flask-example.svg)](https://microbadger.com/images/macinv/flask-example "Get your own image badge on microbadger.com")
+# docker-flask-api
 
-[![Docker Repository on Quay](https://quay.io/repository/macinv/flask-example/status "Docker Repository on Quay")](https://quay.io/repository/macinv/flask-example)
-
-[![Build Status](https://travis-ci.org/macinv/docker-flask-example.svg?branch=master)](https://travis-ci.org/macinv/docker-flask-example)
-
-Docker running a simple flask example
+Docker running a flask api
 
 To run (at port `8080`):
 
-    docker run -p 8080:8080 macinv/flask-example
+    git clone https://github.com/dalijolijo/docker-flask-api.git
+    cd docker-flask-api
+    docker build -t flask-api . 
+    docker run -d --rm -p 8080:8080 -v /root/docker-flask-api/app/:/app --name api flask-api

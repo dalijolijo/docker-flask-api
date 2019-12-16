@@ -1,8 +1,8 @@
 FROM python:2.7-alpine
 MAINTAINER Jeff Li <jeff.li@mackenzieinvestments.com>
 
-COPY . /app
 WORKDIR /app
+COPY requirement.txt /app
 
 RUN pip install -r requirement.txt
 
